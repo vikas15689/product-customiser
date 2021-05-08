@@ -1,28 +1,29 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="app-container">
+    <!--This is where application will switch between components or we can add routing here based on application context-->
+    <ProductCustomiser />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
+/**
+ * Application is bootstraped to this component and this is configurable in main.js
+ */
+import ProductCustomiser from "./modules/product/components/ProductCustomiser";
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    ProductCustomiser,
   },
 };
 </script>
-
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import "./scss/main";
+div.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  /** 72px reserved for header or top nav bar */
+  padding-top: 72px;
 }
 </style>
