@@ -2,7 +2,7 @@
   <div class="product">
     <div class="product__wrapper">
       <div class="product__preview">
-        <ProductPreview :src="require('./../../../assets/macbook-16/dp.jpeg')" />
+        <ProductPreview src="./assets/macbook-16/dp.jpeg" />
       </div>
       <div class="product__customiser">
         <ProductConfiguration :name="product.name" :specs="product.specs" />

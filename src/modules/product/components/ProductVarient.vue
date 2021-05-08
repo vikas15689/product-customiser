@@ -2,6 +2,7 @@
   <div
     class="product__varient"
     @click="handleClick($event)"
+    tabindex="-1"
     :data-selected="selected"
   >
     <div class="product__varient__name">{{ name }}</div>
@@ -51,7 +52,7 @@ div.product__varient {
   cursor: pointer;
   outline: none;
   box-shadow:none;
-  // transition: border 0.3s linear,box-shadow 0.3s linear;
+   transition: box-shadow 0.3s linear;
 
   display: flex;
   align-items: center;
