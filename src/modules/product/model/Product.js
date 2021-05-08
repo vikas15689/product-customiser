@@ -14,25 +14,25 @@ export default class Product {
    * @param {Number} basePrice Base price of varient
    * @param {String} priceUnit Unit of price e.g '$','₹',...
    */
-  constructor(name, basePrice = 0, priceUnit = '₹') {
+  constructor (name, basePrice = 0, priceUnit = '₹') {
     this._name = name
     this._basePrice = basePrice
     this._priceUnit = priceUnit
   }
 
-  get name() {
+  get name () {
     return this._name
   }
 
-  set components(components) {
+  set components (components) {
     this._components = components
   }
 
-  get components() {
+  get components () {
     return this._components
   }
 
-  get priceUnit() {
+  get priceUnit () {
     return this._priceUnit
   }
 
@@ -40,7 +40,7 @@ export default class Product {
   * @param {Component} component This is used while building Product object
   * @returns {Product}
   */
-  withComponent(component) {
+  withComponent (component) {
     this._components.push(component)
     return this
   }
@@ -50,7 +50,7 @@ export default class Product {
   * @param {Array} specs used to specifiy non configurable specification. such as display configurations, number of ports
   * @returns {Product}
   */
-  withDefaultSpec(specs) {
+  withDefaultSpec (specs) {
     this._defaultSpecification = specs
     return this
   }
@@ -58,7 +58,7 @@ export default class Product {
   /**
   * It calculate total price based on variant selection
   */
-  get price() {
+  get price () {
     let totalPrice = this._basePrice
     this._components.forEach(c => {
       totalPrice += c.selectedVariant.price
@@ -74,7 +74,7 @@ export default class Product {
   /**
   * It will return selected variant details with default specification
   */
-  get specs() {
+  get specs () {
     const selectedSpecs = []
 
     this._components.forEach(c => {

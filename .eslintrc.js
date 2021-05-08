@@ -12,7 +12,10 @@ module.exports = {
   },
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-spaced-func': 'error',
+    'func-call-spacing': ['error', 'never'],
+    'space-before-function-paren': 'error'
   },
   overrides: [
     {
