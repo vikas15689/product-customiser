@@ -9,8 +9,8 @@
  * @Component Footer is generic component used to display footer content.It has sticky behavior so that it will always display at bottom.
  */
 export default {
-  name: "Footer",
-};
+  name: 'Footer'
+}
 </script>
 <style lang="scss">
 div.app-footer {

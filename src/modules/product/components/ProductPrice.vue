@@ -8,20 +8,20 @@
 </template>
 <script>
 /**
- * @Component ProductPrice is used display total price and emi per month 
+ * @Component ProductPrice is used display total price and emi per month
  */
 export default {
-    name:"ProductPrice",
-    props:{
-        perMonth:{
-            type:String,
-            default:""
-        },
-        total:{
-            type:String,
-            default:""
-        }
+  name: 'ProductPrice',
+  props: {
+    perMonth: {
+      type: String,
+      default: ''
+    },
+    total: {
+      type: String,
+      default: ''
     }
+  }
 }
 </script>
 <style lang="scss">

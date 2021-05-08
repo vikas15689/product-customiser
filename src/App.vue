@@ -9,13 +9,13 @@
 /**
  * Application is bootstraped to this component and this is configurable in main.js
  */
-import ProductCustomiser from "./modules/product/components/ProductCustomiser";
+import ProductCustomiser from './modules/product/components/ProductCustomiser'
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    ProductCustomiser,
-  },
-};
+    ProductCustomiser
+  }
+}
 </script>
 <style lang="scss">
 @import "./scss/main";

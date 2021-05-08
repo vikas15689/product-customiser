@@ -16,30 +16,30 @@
  * @Component ProductVarient is used to display variant name and its price deviation
  */
 export default {
-  name: "ProductVarient",
+  name: 'ProductVarient',
   props: {
     name: {
       type: String,
-      default: "",
+      default: ''
     },
     selected: {
       type: Boolean,
-      default: false,
+      default: false
     },
     priceDeviation: {
       type: String,
-      default: null,
-    },
+      default: null
+    }
   },
   methods: {
-    handleClick(event) {
+    handleClick (event) {
       /**
        * @event click
        */
-      this.$emit("click", event);
-    },
-  },
-};
+      this.$emit('click', event)
+    }
+  }
+}
 </script>
 <style lang="scss">
 div.product__varient {

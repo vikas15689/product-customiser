@@ -11,24 +11,24 @@
  * @Component ProductConfiguration is used display selected variants and default specs
  */
 export default {
-  name: "ProductConfiguration",
+  name: 'ProductConfiguration',
   props: {
     /**
      * Name of Product
      */
     name: {
       type: String,
-      default: "",
+      default: ''
     },
     /**
      * Array of specification computed in Product
      */
     specs: {
       type: Array,
-      default: () => [],
-    },
-  },
-};
+      default: () => []
+    }
+  }
+}
 </script>
 <style lang="scss">
 div.product__config {

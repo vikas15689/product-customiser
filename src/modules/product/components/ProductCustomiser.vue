@@ -36,43 +36,42 @@
   </div>
 </template>
 <script>
-import ProductPreview from "./ProductPreview";
-import ProductConfiguration from "./ProductConfiguration";
-import ProductVarient from "./ProductVarient";
-import Footer from "./../../shared/components/Footer";
-import ProductPrice from "./ProductPrice";
+import ProductPreview from './ProductPreview'
+import ProductConfiguration from './ProductConfiguration'
+import ProductVarient from './ProductVarient'
+import Footer from './../../shared/components/Footer'
+import ProductPrice from './ProductPrice'
 
 /**
  * @Component ProductCustomiser will display preview, Variant selection panel and Footer with Price
  */
 export default {
-  name: "ProductCustomiser",
+  name: 'ProductCustomiser',
   components: {
     ProductPreview,
     ProductConfiguration,
     ProductVarient,
     Footer,
-    ProductPrice,
+    ProductPrice
   },
   computed: {
-    product() {
-      return this.$store.state.product.selectedProduct;
-    },
+    product () {
+      return this.$store.state.product.selectedProduct
+    }
   },
   methods: {
     /**
      * Used to calculate deviation from selected variant
      */
-    getPriceDeviation(component, variant) {
+    getPriceDeviation (component, variant) {
       if (!variant.selected) {
-        const deviation = variant.price - component.selectedVariant.price;
+        const deviation = variant.price - component.selectedVariant.price
 
-        return deviation > 0 ? "+ "+this.product.priceUnit + deviation : "- "+this.product.priceUnit + deviation * -1;
+        return deviation > 0 ? '+ ' + this.product.priceUnit + deviation : '- ' + this.product.priceUnit + deviation * -1
       }
-      return;
-    },
-  },
-};
+    }
+  }
+}
 </script>
 <style lang="scss">
 div.product {

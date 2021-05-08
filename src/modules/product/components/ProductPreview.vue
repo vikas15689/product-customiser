@@ -6,14 +6,14 @@
  * @Component ProductPreview is used display product image
  */
 export default {
-  name: "ProductPreview",
+  name: 'ProductPreview',
   props: {
     src: {
       type: String,
-      required: true,
-    },
-  },
-};
+      required: true
+    }
+  }
+}
 </script>
 <style lang="scss">
 img.product__image {
