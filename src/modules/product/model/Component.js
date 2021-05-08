@@ -29,19 +29,19 @@ export default class Component {
     }
 
     /**
-         * Adds variant to Component and returns Component
-         * @param {Variant} variant
-         * @returns {Component}
-         */
+    * Adds variant to Component and returns Component
+    * @param {Variant} variant
+    * @returns {Component}
+    */
     withVariant (variant) {
       this._variants.push(variant)
       return this
     }
 
     /**
-         * It selects variant in Component
-         * @param {Variant} varient
-         */
+    * It selects variant in Component
+    * @param {Variant} varient
+    */
     select (varient) {
       this._variants.forEach(v => {
         if (varient === v) {
@@ -53,9 +53,9 @@ export default class Component {
     }
 
     /**
-         * returns selected variant
-         * @returns {Variant}
-         */
+    * returns selected variant
+    * @returns {Variant}
+    */
     get selectedVariant () {
       return this._variants.find(v => v.selected)
     }
