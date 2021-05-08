@@ -5,7 +5,10 @@
         <ProductPreview src="./assets/macbook-16/dp.jpeg" />
       </div>
       <div class="product__customiser">
-        <ProductConfiguration :name="product.name" :specs="product.specs" />
+        <ProductConfiguration
+          :name="product.name"
+          :specs="product.specs"
+        />
         <div class="product__customiser__divider"></div>
         <div
           v-for="(component, idx) in product.components"
@@ -67,7 +70,9 @@ export default {
       if (!variant.selected) {
         const deviation = variant.price - component.selectedVariant.price
 
-        return deviation > 0 ? '+ ' + this.product.priceUnit + deviation : '- ' + this.product.priceUnit + deviation * -1
+        return deviation > 0
+          ? '+ ' + this.product.priceUnit + deviation
+          : '- ' + this.product.priceUnit + deviation * -1
       }
     }
   }

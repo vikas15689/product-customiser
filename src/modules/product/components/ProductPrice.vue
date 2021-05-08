@@ -41,4 +41,9 @@ div.product-price {
     line-height: 1.2;
   }
 }
+@media only screen and (max-width: 500px) {
+  div.product-price {
+      padding: 24px 24px 24px 52px;
+  }
+}
 </style>
